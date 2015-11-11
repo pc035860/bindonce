@@ -113,7 +113,7 @@
 						// undefined until they don't get resolved
 						if (typeof promise === 'function')
 						{
-							promise(function ()
+							promise.call(value.$promise, function ()
 							{
 								that.runBinders();
 							});
